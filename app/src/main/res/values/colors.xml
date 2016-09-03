@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme colors-->
+    <color name="colorPrimary">#0e55b9</color>
+    <color name="colorPrimaryDark">#0657e2</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorTitle">#0e86ff</color>
+    <color name="colorBottom">#FCFCFC</color>
+
+    <color name="colorMain">#0e86ff</color>
+    <!-- 分割线 -->
+    <color name="divider_gray">#cbcbcb</color>
+
+    <!-- Text colors-->
+
+    <color name="colorTitleText">#ffffff</color>
+    <color name="colorNotice">#5C5C5C</color>
+
+
+    <color name="colorRecommendText">#0084CF</color>
+    <color name="colorLoveText">#0084CF</color>
+
+
+    <color name="colorBackRegister">#F5F5F5</color>
+
+    <color name="colorLine">#C1C1C1</color>
+
+    <color name="colorLittleLine">#d0cfcf</color>
+
+    <color name="colorHint">#c2bebe</color>
+
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorCompanyBackground">#F6F6F6</color>
+
+    <color name="colorBillBackground">#F5F5F5</color>
+
+
+    <color name="colorUserBackground">#F1F1F1</color>
+
+    <color name="colorBlue">#4BC4FB</color>
+
+    <color name="colorBankBack">#E8ECF0</color>
+
+    <color name="colorSelectedLoanBackground">#F1F1F1</color>
+
+    <color name="colorLoanActivity">#E8ECF0</color>
+
+    <color name="colorLoanTitle">#DEDEDE</color>
+
+    <color name="colorLoanLine">#D8D8D8</color>
+
+    <color name="colorNew">#F60000</color>
+    <color name="co">#961a1a</color>
+    <color name="titleBack">#FF4B7C4E</color>
+
+    <color name="colorLogoutBack">#FF4E49</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="colorBlack">#000</color>
+
+    <color name="colorGreen">#35ee10</color>
+
+    <color name="colorBackgroundGray">#eeeeee</color>
+    <color name="colorTextdGray">#B0B0B0</color>
+    <color name="colorTextdBlack">#757575</color>
+    <!-- 按钮蓝色-->
+    <color name="colorBtnBlue">#0e86ff</color>
+    <color name="colorBtnBlueDark">#1f75cd</color>
+
+
+    <color name="colorMainBottom">#D4DEE4</color>
+    <color name="colorHelp">#25B578</color>
+    <color name="colorHotProduct">#FF6A30</color>
+    <color name="colorCompany">#F1BB00</color>
+
+    <color name="colorBottomBar">#F3F5F6</color>
+
+    <color name="colorBlackTitle">#1E3137</color>
+
+    <color name="colorBlackMain">#1E3137</color>
+
+    <color name="colorGradientStart">#0e86ff</color>
+    <color name="colorGradientEnd">#3ef2b5</color>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="focus_height">128dp</dimen>
+
+    <dimen name="title_bar_height">49dp</dimen>
+
+    <dimen name="notice_bar_height">40dp</dimen>
+
+    <dimen name="notice_image_height">16dp</dimen>
+
+    <dimen name="notice_image_width">16dp</dimen>
+
+    <dimen name="notice_text_size">12sp</dimen>
+
+    <dimen name="notice_text_padding_top">13dp</dimen>
+
+    <dimen name="notice_text_padding_bottom">14dp</dimen>
+
+    <dimen name="notice_help_button_width">63dp</dimen>
+
+    <dimen name="notice_help_button_height">21dp</dimen>
+
+    <dimen name="bottom_bar_height">50dp</dimen>
+
+    <dimen name="center_button_height">55dp</dimen>
+
+    <dimen name="register_button_width">288dp</dimen>
+
+    <dimen name="login_logo_height">160dp</dimen>
+
+    <dimen name="login_logo_image_height">71dp</dimen>
+
+    <dimen name="login_list_height">77dp</dimen>
+    
+    <dimen name="login_list_margin">16dp</dimen>
+
+    <dimen name="third_view_width">120dp</dimen>
+
+    <dimen name="login_edit_margin">56dp</dimen>
+
+    <dimen name="third_view_margin">44dp</dimen>
+
+    <dimen name="commit_button_height">37dp</dimen>
+
+    <dimen name="commit_button_width">280dp</dimen>
+
+    <dimen name="upload_picture_width">80dp</dimen>
+
+    <dimen name="upload_picture_height">60dp</dimen>
+
+</resources>

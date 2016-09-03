@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorMain"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/titleBack"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/back_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title_info"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:text="城市选择"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end">
+            <ImageView
+                android:id="@+id/right_image"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 热门城市 -->
+    <!-- 通过adapter 设置横排显示 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite">
+        <RelativeLayout
+            android:id="@+id/list_fragment_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/index_fragment_contain"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <com.ddm.cityselector.CustomView.SildBar
+                android:id="@+id/sild_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

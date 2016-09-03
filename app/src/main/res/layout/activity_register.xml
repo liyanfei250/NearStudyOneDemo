@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_match"
+    android:background="@color/colorBackRegister"
+    android:orientation="vertical">
+
+    <!-- 注册页面  -->
+    <!-- app图标  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:background="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+
+    <!-- 注册必填项  -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp">
+        <LinearLayout
+            style="@style/match_match"
+            android:paddingEnd="50dp"
+            android:paddingStart="50dp"
+            android:paddingLeft="50dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/user_code_password"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/register_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:hint="手机号"/>
+
+            <EditText
+                android:id="@+id/register_captcha"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@null"
+                android:drawablePadding="20dp"
+                android:hint="输入验证码"/>
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:password="true"
+                android:inputType="textPassword"
+                android:gravity="center_vertical"
+                android:hint="输入密码"/>
+        </LinearLayout>
+
+        <FrameLayout
+            style="@style/match_match">
+            <LinearLayout
+                style="@style/match_match"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingEnd="27dp"
+                android:paddingRight="27dp"
+                android:paddingStart="1dp"
+                android:paddingLeft="1dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        style="@style/wrap_wrap" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/get_captcha"
+                        android:layout_width="90dp"
+                        android:layout_height="25dp"
+                        android:gravity="center"
+                        android:background="@drawable/captcha_button"/>
+
+                    <TextView
+                        android:id="@+id/count_down"
+                        android:layout_width="87dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/captcha_after"
+                        android:lines="1"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:text="@string/app_name"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/register_eye"
+                        android:layout_width="27dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/eye_selector"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- 注册协议  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="39dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="19dp"
+            android:paddingLeft="19dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="14dp"
+                android:background="@drawable/checkbox"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="同意"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册协议"
+                android:textColor="@color/colorRecommendText"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="@dimen/register_button_width"
+            android:layout_height="42dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/register_button"/>
+    </LinearLayout>
+
+</LinearLayout>

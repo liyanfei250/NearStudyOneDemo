@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="city_selector_name">城市选择器</string>
+    
+    <string name="location_city">贵阳市</string>
+    <string name="current_location_city">当前定位城市</string>
+
+    <string-array name="city_name">
+        <item></item>
+    </string-array>
+</resources>

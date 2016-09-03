@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="当前城市" />
+
+    <LinearLayout
+        android:id="@+id/city_locate_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <ImageView
+            android:src="@mipmap/icon_location"
+            android:layout_width="14dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/city_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在定位中..."
+            android:layout_marginLeft="10dp"
+            android:textColor="#3b9fff"
+            android:textSize="14sp"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="热门城市" />
+
+    <LinearLayout
+        android:id="@+id/hot_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_back"
+        android:orientation="vertical">
+
+        <com.ddm.cityselector.CustomView.Custom
+            android:id="@+id/grad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="3" />
+
+    </LinearLayout>
+
+</LinearLayout>

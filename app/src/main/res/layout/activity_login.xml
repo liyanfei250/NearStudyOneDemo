@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_match"
+    android:background="@color/colorBackRegister"
+    android:weightSum="3"
+    android:orientation="vertical">
+
+    <!-- app picture-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_logo_height"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/login_logo_image_height"
+            android:layout_height="@dimen/login_logo_image_height"
+            android:background="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+
+    <!-- login -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_list_height"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/login_list_margin"
+        android:layout_marginLeft="@dimen/login_list_margin"
+        android:layout_marginEnd="@dimen/login_list_margin"
+        android:layout_marginRight="@dimen/login_list_margin"
+        android:paddingLeft="@dimen/login_edit_margin"
+        android:paddingRight="@dimen/login_edit_margin"
+        android:background="@drawable/user_password_back">
+
+        <EditText
+            android:id="@+id/login_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:singleLine="true"
+            android:textColor="@color/colorMain"
+            android:textColorHint="@color/colorHint"
+            android:hint="手机/邮箱/用户名"/>
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:background="@null"
+            android:textColor="@color/colorMain"
+            android:textColorHint="@color/colorHint"
+            android:hint="密码"/>
+
+    </LinearLayout>
+
+    <!-- register button-->
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:weightSum="1"
+        android:paddingTop="14dp"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/login_button"
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:background="@drawable/login_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:paddingTop="14dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="@dimen/register_button_width"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/colorMain"
+            android:text="忘记密码?"/>
+
+    </LinearLayout>
+
+    <!-- 第三方登陆-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/third_view_margin"
+        android:weightSum="5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorLine"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#7b7676"
+            android:text="第三方登录"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorLine"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/wx_login"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginRight="33dp"
+                android:layout_marginEnd="33dp"
+                android:background="@drawable/wechat"/>
+            <ImageView
+                android:id="@+id/qq_login"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:background="@drawable/qq"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fast_register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            android:textColor="#7b7676"
+            android:text="新用户 ? 立即注册"/>
+    </RelativeLayout>
+
+</LinearLayout>
