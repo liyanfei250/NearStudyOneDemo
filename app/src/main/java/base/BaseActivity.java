@@ -1,5 +1,7 @@
 package base;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,15 +10,15 @@ import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lzq.near.R;
-
 import app.AbsSuperApplication;
-import butterknife.ButterKnife;
+import util.DialogUtils;
+import util.ToastUtils;
 
 public abstract class BaseActivity extends NearBaseActivity {
 
@@ -29,25 +31,28 @@ public abstract class BaseActivity extends NearBaseActivity {
     protected Toast mToast;
 
     protected ProgressDialog bar;
+    private Dialog progressDialog;
+    protected String TAG;
 
     protected void init() {
 
-        mToolbar = (Toolbar) findViewById(R.id.id_toolBar);
-        setSupportActionBar(mToolbar);
-
+//        mToolbar = (Toolbar) findViewById(R.id.id_toolBar);
+//        setSupportActionBar(mToolbar);
+        TAG = getClass().getSimpleName();
+        progressDialog = DialogUtils.createProgressDialog(this);
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AbsSuperApplication.pushActivity(this);
+        init();
     }
 
     @Override
     protected void onDestroy() {
 
         super.onDestroy();
-        ButterKnife.reset(this);
         AbsSuperApplication.popActivity(this);
 
     }
@@ -195,19 +200,31 @@ public abstract class BaseActivity extends NearBaseActivity {
         }
     }
 
-   /* @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        System.out.println(fragmentManager.getBackStackEntryCount());
-        if (fragmentManager.getBackStackEntryCount() > 1) {
-            fragmentManager.popBackStack();
-            return true;
-        } else {
-            //// TODO: 6/20/16  双击 退出 程序
-            finish();
-            return true;
-        }
-    }*/
 
+    /**
+     * 跳转页面,无extra简易型
+     *
+     * @param tarActivity 目标页面
+     */
+    public void intent2Activity(Class<? extends Activity> tarActivity) {
+        Intent intent = new Intent(this, tarActivity);
+        startActivity(intent);
+    }
 
+    public void showToast(String msg) {
+        ToastUtils.showToast(this, msg, Toast.LENGTH_SHORT);
+    }
+
+    public void showLog(String msg) {
+        Log.i(TAG, msg);
+    }
+
+    public void showProgressDialog() {
+        progressDialog.show();
+    }
+
+    public void dismissProgressDialog() {
+        progressDialog.dismiss();
+    }
 
 }

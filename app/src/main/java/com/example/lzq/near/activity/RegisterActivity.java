@@ -4,34 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.example.lzq.near.R;
 
 import base.BaseActivity;
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class RegisterActivity extends BaseActivity {
 
-    @InjectView(R.id.register_phone_number)
-    EditText registerPhoneNumber;
-    @InjectView(R.id.register_captcha)
-    EditText registerCaptcha;
-    @InjectView(R.id.register_password)
-    EditText registerPassword;
-    @InjectView(R.id.get_captcha)
-    ImageView getCaptcha;
-    @InjectView(R.id.count_down)
-    TextView countDown;
-    @InjectView(R.id.register_eye)
-    ImageView registerEye;
-    @InjectView(R.id.register_button)
-    Button registerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +22,6 @@ public class RegisterActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.reset(this);
     }
     public static void actionStart(Context context) {
         Intent intent = new Intent(context, RegisterActivity.class);

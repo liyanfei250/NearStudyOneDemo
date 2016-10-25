@@ -32,6 +32,7 @@ public class AppUtils {
             }
         } catch (Exception e) {
             Log.e("VersionInfo", "Exception", e);
+            return "0";
         }
         return versionName;
     }

@@ -55,6 +55,11 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activity.SearchActivity"></activity>
 
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

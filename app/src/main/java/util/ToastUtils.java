@@ -23,5 +23,4 @@ public class ToastUtils {
     public static void showToast(Context context, CharSequence text) {
         showToast(context, text, Toast.LENGTH_SHORT);
     }
-
 }

@@ -9,17 +9,16 @@ import android.view.ViewGroup;
 import com.example.lzq.near.R;
 
 import base.NearBaseFragment;
-import butterknife.ButterKnife;
 
 /**
  * Created by LYF on 2016/9/2.
  */
-public class MyCarFragment extends NearBaseFragment {
+public class WaiteFragment extends NearBaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_home_layout, null);
+        View view = inflater.inflate(R.layout.fragment_waite_layout, null);
 
         return view;
     }
@@ -30,17 +29,16 @@ public class MyCarFragment extends NearBaseFragment {
     }
 
 
-    public static MyCarFragment newInstance() {
+    public static WaiteFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        MyCarFragment fragment = new MyCarFragment();
+        WaiteFragment fragment = new WaiteFragment();
         fragment.setArguments(args);
         return fragment;
     }
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.reset(this);
     }
 }

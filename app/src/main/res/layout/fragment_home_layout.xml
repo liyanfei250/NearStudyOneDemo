@@ -7,17 +7,26 @@
 
     <include layout="@layout/fragment_title_layout" />
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackgroundGray"
-        android:orientation="vertical">
+        android:orientation="vertical">-->
 
-        <FrameLayout
-            android:id="@+id/viewPage_contain"
+        <!--<com.youth.banner.Banner
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_180"></FrameLayout>
+            android:layout_height="@dimen/dp_180"
+            app:default_image="@mipmap/ic_launcher"
+            app:delay_time="2000"
+            app:is_auto_play="true"
+            app:image_scale_type="fit_xy"
+            app:title_height="30dp"
+            app:title_textcolor="@color/colorTitleText"
+            app:title_textsize="10sp"
+            />-->
 
         <include layout="@layout/include_refresh_list" />
-    </LinearLayout>
+    <!--</LinearLayout>-->
 </LinearLayout>

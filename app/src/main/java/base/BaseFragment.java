@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.ButterKnife;
+import rx.Subscription;
 
 /**
  * Created by LYF on 2016/9/2.
@@ -21,6 +21,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected FragmentManager fragmentManager;
 
+    protected Subscription subscription;
     /**
      * 重写父类方法, 初始化 activity  防止内存不足activity 被销毁 空指针异常
      * 同时重写onAttach(Activity activity)  不是V4包的Fragment onAttach(Context context) 不执行
@@ -44,15 +45,21 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
-        ButterKnife.inject(this, view);
+//        ButterKnife.inject(this, view);
         return view;
     }
 
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        ButterKnife.reset(this);
+    public void onDestroyView() {
+        super.onDestroyView();
+        unsubscribe();
+    }
+
+    protected void unsubscribe() {
+        if (subscription != null && !subscription.isUnsubscribed()) {
+            subscription.unsubscribe();
+        }
     }
 
     protected abstract int getLayoutId();

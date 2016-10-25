@@ -1,1 +1,1 @@
-include ':app', ':cityselector'
+include ':app', ':cityselector', ':multi-image-selector', ':changemodelibrary'

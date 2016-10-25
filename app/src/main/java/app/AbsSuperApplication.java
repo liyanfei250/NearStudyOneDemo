@@ -11,14 +11,9 @@ import android.text.TextUtils;
 import com.apkfuns.logutils.LogUtils;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.integration.okhttp.OkHttpUrlLoader;
-import com.bumptech.glide.load.model.GlideUrl;
-import com.squareup.okhttp.OkHttpClient;
 
-import net.HttpRequest;
+import org.kymjs.kjframe.KJBitmap;
 
-import java.io.InputStream;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,6 +37,10 @@ public class AbsSuperApplication extends Application {
     public static SharedPreferences sharedPreferences;
     LocationServer locationServer;
     public static AbsSuperApplication application;
+    public static int N =0;
+
+    public static boolean isUnitTest = false;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -55,16 +54,20 @@ public class AbsSuperApplication extends Application {
         sharedPreferences = AppConfig.getAppConfig(application).getSp();
 //        appName =  getAppNameFromSub();
         registerActivityListener();
-        initGlide();
+//        initGlide();
 
     }
+
+    public static KJBitmap kjBitmap = new KJBitmap();
 
     public AbsSuperApplication() {
         super();
     }
+
     public synchronized static AbsSuperApplication getInstance() {
         return application;
     }
+
     BDLocationListener listener = new BDLocationListener() {
         @Override
         public void onReceiveLocation(BDLocation bdLocation) {
@@ -88,15 +91,15 @@ public class AbsSuperApplication extends Application {
 
         }
     };
+
     /**
      * 图片加载框架Glide,使用OkHttp处理网络请求
      */
-    private void initGlide() {
+    /*private void initGlide() {
         OkHttpClient okHttpClient = HttpRequest.getHttpClient();
         Glide.get(this).register(GlideUrl.class, InputStream.class,
                 new OkHttpUrlLoader.Factory(okHttpClient));
-    }
-
+    }*/
     public static String getAppName() {
         return appName;
     }

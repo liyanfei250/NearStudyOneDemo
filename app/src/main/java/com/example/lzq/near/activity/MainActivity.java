@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import app.AbsSuperApplication;
 import base.BaseActivity;
 import fragment.HomePageFragment;
-import fragment.MyCarFragment;
+import fragment.WaiteFragment;
 import fragment.NearlyFragment;
 import fragment.PersonCenterFragment;
 import me.majiajie.pagerbottomtabstrip.Controller;
@@ -26,6 +26,8 @@ import me.majiajie.pagerbottomtabstrip.TabLayoutMode;
 import me.majiajie.pagerbottomtabstrip.listener.OnTabItemSelectListener;
 import rx.Observable;
 import rx.functions.Action1;
+import thinkfreely.changemodelibrary.ChangeModeController;
+import util.UpdateUtils;
 
 public class MainActivity extends BaseActivity {
 
@@ -37,8 +39,14 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        ChangeModeController.getInstance().init(this,R.attr.class).setTheme(this, R.style.DayTheme, R.style.NightTheme);
+//        ChangeModeController.getInstance().init(this.getActivity(),R.attr.class).setTheme(this.getActivity(), R.style.DayTheme, R.style.NightTheme);
+//        ChangeModeController.setTheme(this, R.style.DayTheme, R.style.NightTheme);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        //进入界面检查是否需要更新，可以在beseactivty中执行操作
+        UpdateUtils.checkUpdate(this, false);
         initFragment();
         initTab();
     }
@@ -48,7 +56,7 @@ public class MainActivity extends BaseActivity {
 
         mFragments.add(new HomePageFragment());
         mFragments.add(new NearlyFragment());
-        mFragments.add(new MyCarFragment());
+        mFragments.add(new WaiteFragment());
         mFragments.add(new PersonCenterFragment());
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -97,6 +105,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ChangeModeController.onDestory();
     }
 
     @Override

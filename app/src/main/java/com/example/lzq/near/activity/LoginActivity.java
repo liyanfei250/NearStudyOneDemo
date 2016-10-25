@@ -4,34 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lzq.near.R;
 
 import base.BaseActivity;
-import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
 
-    @InjectView(R.id.login_name)
-    EditText loginName;
-    @InjectView(R.id.login_password)
-    EditText loginPassword;
-    @InjectView(R.id.login_button)
-    Button loginButton;
-    @InjectView(R.id.forget_password)
-    TextView forgetPassword;
-    @InjectView(R.id.wx_login)
-    ImageView wxLogin;
-    @InjectView(R.id.qq_login)
-    ImageView qqLogin;
-    @InjectView(R.id.fast_register)
-    TextView fastRegister;
     private TextView fast_register;
 
     @Override
@@ -50,7 +31,6 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.reset(this);
     }
 
     @Override

@@ -4,11 +4,9 @@ package net;
 import android.content.Context;
 
 import rx.Subscriber;
-import util.ToastUtils;
-
 
 /**
- * 通用订阅者,用于统一处理错误回调
+ * 通用订阅者,用于统一处理回调
  */
 public class SimpleSubscriber<T> extends Subscriber<T> {
 
@@ -25,8 +23,9 @@ public class SimpleSubscriber<T> extends Subscriber<T> {
 
     @Override
     public void onError(Throwable throwable) {
+        // 统一处理错误回调，显示Toast
 //        String errorInfo = ErrorInfoUtils.parseHttpErrorInfo(throwable);
-        ToastUtils.showToast(context, throwable.toString());
+//        ToastUtils.showToast(context, errorInfo);
     }
 
     @Override

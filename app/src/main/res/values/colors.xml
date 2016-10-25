@@ -33,6 +33,8 @@
 
     <color name="colorWhite">#ffffff</color>
 
+    <color name="colorTitleBar">#44000000</color>
+
     <color name="colorCompanyBackground">#F6F6F6</color>
 
     <color name="colorBillBackground">#F5F5F5</color>
@@ -85,4 +87,35 @@
 
     <color name="colorGradientStart">#0e86ff</color>
     <color name="colorGradientEnd">#3ef2b5</color>
+
+    <color name="colorPrimaryNight">#263238</color>
+    <color name="colorPrimaryDarkNight">#1E282D</color>
+    <color name="colorAccentNight">#73432A</color>
+
+    <color name="nightItemBackground">#37474F</color>
+    <color name="nightBackground">#263238</color>
+    <color name="nightTextColor">#fff</color>
+
+    <color name="dayBackground">#F2F4F7</color>
+    <color name="dayTextColor">#000</color>
+    <color name="dayItemBackground">#fff</color>
+
+
+    <color name="white_txt">#ffffff</color>
+    <color name="divider_line_color">#e5e5e5</color>
+    <color name="black">#000000</color>
+    <color name="light_black">#666666</color>
+    <color name="gray">#999999</color>
+    <color name="dark_gray">#333333</color>
+    <color name="light_gray">#dcdcdc</color>
+
+    <color name="orange">#EC6A37</color>
+    <color name="orange1">#FFC04E</color>
+    <color name="orange2">#EC7900</color>
+    <color name="orange3">#FCA963</color>
+    <color name="orange4">#f84000</color>
+    <color name="orange5">#50EC6A37</color>
+    <color name="orange6">#6b3100</color>
+    <color name="orange7">#ffdd89</color>
+
 </resources>

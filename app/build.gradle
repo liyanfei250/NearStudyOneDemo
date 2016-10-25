@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -23,11 +22,13 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.jakewharton:butterknife:5.1.1'
     compile 'com.google.code.gson:gson:2.4'
+/*这里用的7.0.1具体用法，大家可以参考项目中有用到，方便对比，项目中用到原生的很多*/
+    compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.picasso:picasso:2.3.2'
     compile 'com.android.support:design:24.0.0'
     compile 'com.apkfuns.logutils:library:1.4.2'
+    //开源的底部tab项目，参考本项目
     compile 'me.majiajie:pager-bottom-tab-strip:1.0.0'
     compile 'com.android.support:support-v4:24.0.0'
     compile 'io.reactivex:rxjava:1.1.7'
@@ -37,9 +38,25 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
-    compile project(':cityselector')
+    compile 'com.squareup.okhttp:okhttp-tests:1.6.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:okhttp-integration:1.4.0'
     compile 'com.squareup.okhttp:logging-interceptor:2.7.5'
-    compile files('libs/BaiduLBS_Android.jar')
+    //在项目中已经注销掉，很好的开源大家可以看看
+    compile 'com.youth.banner:banner:1.3.0'
+    //指定版本
+    compile 'com.youth.banner:banner:+'
+    //最新版本
+    compile 'com.android.support:cardview-v7:24.0.0'
+    //这是城市选择器
+    compile project(':cityselector')
+    //这里是模仿微信的图片选择器
+    compile project(path: ':multi-image-selector')
+    //这里是夜间模式实现的公共类
+    compile project(':changemodelibrary')
+    //以下是两个libs引入的
+    compile files('libs/kjframe-2.5.5.jar')
+    compile files('libs/BaiduLBS_Android.jar')//百度定位
+
+
 }
